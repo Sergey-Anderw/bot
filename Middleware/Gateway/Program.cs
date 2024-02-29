@@ -47,7 +47,7 @@ builder.Services.AddScopedServices();
 // AddTransientServices
 builder.Services.AddTransientServices();
 
-builder.Services.AddOpenAIService(settings => { settings.ApiKey = "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"; });
+builder.Services.AddOpenAIService(settings => { settings.ApiKey = "OpenAIKey"; });
 
 builder.Services.AddOrUpdateBlob(configuration);
 

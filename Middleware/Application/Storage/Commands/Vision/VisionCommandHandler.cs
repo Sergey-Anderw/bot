@@ -13,7 +13,7 @@ namespace Application.Storage.Commands.Vision
     internal class VisionCommandHandler(BlobServiceClient blobServiceClient, IOpenAIService openai) : IRequestHandler<VisionCommand>
     {
         private const string Endpoint = "https://analisedocs.cognitiveservices.azure.com/"; //"https://searchforapp.search.windows.net";
-        private const string SubscriptionKey = "8f4eebdcc5044e12aef4319a6723965b";
+        private const string SubscriptionKey = "-";
         private readonly IOpenAIService _openai = openai;
 
 
