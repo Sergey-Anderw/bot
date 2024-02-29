@@ -1,0 +1,101 @@
+[import](common.lg)
+
+# SendActivity_ErrorOccured()
+[Activity
+    Text = ${SendActivity_ErrorOccured_text()}
+]
+
+# SendActivity_ErrorOccured_text()
+- Oops, looks like I'm stuck. Can you try to ask me in a different way?
+- Looks like I'm all mixed up. Let's try asking again, but maybe rephrase your request?
+- Sorry, it looks like something went wrong. Can you please try again?
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that
+- I'm not sure I understand. Can you please try again?
+- Hmm, I don't understand. Can you try to ask me in a different way. 
+- I didn't get that. Would you mind rephrasing and try it again.
+
+# SendActivity_bUZDYr()
+[Activity
+    Attachments = ${json(SendActivity_bUZDYr_attachment_cEBXrw())}
+]
+
+# SendActivity_bUZDYr_attachment_cEBXrw()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "type": "AdaptiveCard",
+ "body": [
+ 
+        {
+		    "type": "ColumnSet",
+			"columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "size": "Medium",
+                            "url": "https://adaptivecards.io/content/airplane.png", //"http://localhost:3978/media/geniebiz_logo_v2",
+                            "altText": "genie"
+                        }
+                    ]
+                },
+				{
+				    "type": "Column",
+                    "width": "stretch",
+					"items": [
+					        {
+            "type": "TextBlock",
+            "text": "Приветствую мой господин!",
+            "isSubtle": true,
+            "wrap": true,
+            "weight": "Bolder",
+            "size": "Medium"
+        },        {
+            "type": "TextBlock",
+            "text": "Я Исла-Джин, готов исполнить ваши желания по развитию бизнеса. Выберите одну из магических услуг ниже, чтобы начать:",
+            "spacing": "none",
+            "wrap": true
+        }
+
+		
+
+					]
+
+
+				}
+		  ]
+
+		},
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Регистрация бизнеса",
+                    "data": { "action": "registerBusiness" }
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Добавить услугу",
+                    "data": { "action": "addService" }
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Получить совет",
+                    "data": { "action": "getAdvice" }
+                }
+            ]
+        }
+    ]
+}```
